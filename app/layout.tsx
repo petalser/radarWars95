@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Taskbar } from "@/components/Taskbar";
+import { Cursor } from "@react95/core";
 import "./globals.css";
+import '@react95/core/GlobalStyle';
+import '@react95/core/themes/win95.css';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${Cursor.Auto} bg-win95 antialiased`}
       >
-        {children}
+        <div className="m-2 flex flex-col flex-wrap w-fit gap-2 h-[calc(100dvh-2.5rem)]">
+          {children}
+        </div>
+        <Taskbar />
       </body>
     </html>
   );
