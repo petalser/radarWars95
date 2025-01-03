@@ -11,6 +11,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        geist: ['var(--font-geist-sans)', 'sans-serif'],
+        mono: ['var(--font-geist-mono)', 'monospace'],
+        caveat: ['var(--font-caveat)', 'cursive'], // Add Caveat
+      },
+      screens: {
+        big: "896px"
+      },
       colors: {
         background: "var(--background)", // Custom background color using CSS variables
         foreground: "var(--foreground)", // Custom foreground color using CSS variables
