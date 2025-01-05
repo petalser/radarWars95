@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Caveat } from "next/font/google";
+import { Geist, Caveat, VT323 } from "next/font/google";
 import { Taskbar } from "@/components/Taskbar";
 import { Cursor } from "@react95/core";
 import { StickyNote } from "@/components/StickyNote";
@@ -9,11 +9,6 @@ import '@react95/core/themes/win95.css';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -35,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} ${Cursor.Auto} bg-win95 antialiased`}
+        className={`${geistSans.variable}  ${caveat.variable} ${Cursor.Auto} bg-win95 antialiased`}
       >
         <div className="m-2 flex flex-col flex-wrap w-fit gap-2 h-[calc(100dvh-2.5rem)]">
           {children}

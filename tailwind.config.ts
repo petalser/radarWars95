@@ -13,8 +13,9 @@ const config: Config = {
     extend: {
       fontFamily: {
         geist: ['var(--font-geist-sans)', 'sans-serif'],
-        mono: ['var(--font-geist-mono)', 'monospace'],
         caveat: ['var(--font-caveat)', 'cursive'], // Add Caveat
+        mono: ['Web437_IBM_VGA_8x16', 'monospace'],
+
       },
       screens: {
         big: "896px"

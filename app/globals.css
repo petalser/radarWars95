@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Web437_IBM_VGA_8x16';
+  src: url('/fonts/Web437_IBM_VGA_8x16.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
