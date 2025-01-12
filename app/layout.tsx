@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Caveat, VT323 } from "next/font/google";
+import { Geist, Caveat } from "next/font/google";
 import { Taskbar } from "@/components/Taskbar";
 import { Cursor } from "@react95/core";
 import { StickyNote } from "@/components/StickyNote";
@@ -24,17 +24,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode
 }>) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable}  ${caveat.variable} ${Cursor.Auto} bg-win95 antialiased`}
       >
-        <div className="m-2 flex flex-col flex-wrap w-fit gap-2 h-[calc(100dvh-2.5rem)]">
+        <main className="m-2 flex flex-col flex-wrap w-fit gap-2 h-[calc(100dvh-2.5rem)]">
+          {modal}
           {children}
-        </div>
+        </main>
         <StickyNote />
         <Taskbar />
       </body>
