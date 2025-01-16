@@ -9,7 +9,8 @@ const desktopIcons = [
   },
   {
     text: "Radar Wars",
-    icon: IconRadar
+    icon: IconRadar,
+    url: "/radar-wars"
   },
 ]
 
@@ -17,7 +18,7 @@ export default function Home() {
   return (
     <>
       {desktopIcons.map((item, index) => {
-        return <DesktopIcon text={item.text} key={index} >
+        return <DesktopIcon text={item.text} url={item.url} key={index} >
           <item.icon className="mx-auto mt-1" />
         </DesktopIcon>
       })}
