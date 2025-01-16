@@ -12,8 +12,6 @@ type RWInitProps = {
 export default function Window({ children, prevUrl, title }: RWInitProps) {
     const router = useRouter()
 
-    const defaultPosition = prevUrl ? { x: 0, y: 0 } : { x: 60, y: 60 }
-
     function handleClose() {
         if (prevUrl) { router.push(prevUrl, {}) } else { router.back() }
     }
@@ -25,9 +23,8 @@ export default function Window({ children, prevUrl, title }: RWInitProps) {
             style={{ top: 0, left: 0 }}
             title={title}
             titleBarOptions={[
-                <TitleBar.Close key="close" onClick={handleClose} style={{ paddingInline: "0" }} />
+                <TitleBar.Close key="close" onClick={handleClose} style={{ paddingInline: 0 }} />
             ]}
-            dragOptions={{ defaultPosition }}
         >
             {children}
         </Modal>
